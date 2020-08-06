@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #333333;
+    color: #ffffff;
+    /* overflow: hidden; */
+}
+
+h1{
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+p{
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+.container{
+    position: relative;
+    background: url(https://images.pexels.com/photos/53610/large-home-residential-house-architecture-53610.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-size: cover;
+    background-position: center;
+    height: 130vh;  
+    margin-bottom: 45px;
+}
+
+.bar{
+    width: 3rem;
+    height: 3rem;
+    background: #fff;
+    position: absolute;
+    top: 4rem;
+    right: 5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    animation-name: background;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-delay: 22500ms;
+}
+
+
+.bar.right{
+    position: absolute;
+    top: 5rem;
+    right: 16.5rem;
+}
+
+.bar.left{
+    position: absolute;
+    top: 5rem;
+    left: 16.5rem;
+    z-index: 1000;
+}
+
+.menuToggler{
+    position: relative;
+    padding-top: 7px;
+}
+
+.one, .two, .three{
+    border: 2px solid #000000;
+    margin: 5px;
+}
+
+.landing{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+    text-align: center;
+    padding-top: 50px;
+}
+
+.landing img{
+    padding-bottom: 50px;
+}
+
+.countdown{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.countdown div{
+    width: 20%;
+    height: 90px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    margin: 5px;
+    opacity: 0.7;
+    background: crimson;
+}
+
+.countdown span{
+    display: block;
+}
+
+.countdown div:first-child{
+    background: green;
+}
+
+.social-media{
+    width: 4rem;
+    height: 7rem;
+    background: yellow;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    z-index: 1000;
+    list-style: none;
+}
+
+.social-media li{
+    margin: 3px auto;
+}
+
+.social-media.show{
+    visibility: visible;
+}
+
+.left{
+    position: absolute;
+    top: 8rem;
+    left: 16rem;    
+}
+
+.right{
+    position: absolute;
+    top: 8rem;
+    right: 16rem;    
+}
+
+
+
+@keyframes background{
+
+    0%{
+        background: #ffffff;
+    }
+
+    15%{
+        background: lightblue;
+    }
+
+    30%{
+        background: blue;
+    }
+
+    45%{
+        background: orangered;
+    }
+
+    60%{
+        background: red;
+    }
+
+    75%{
+        background: yellow;
+    }
+
+    90%{
+        background: green;
+    }
+
+    100%{
+        background: #ffffff;
+    }
+}
+
+
+
+
+/* Media Queries */
+
+@media(max-width: 900px){
+    
+    .bar.left{
+        left: 8rem;
+    }
+    
+    .bar.right{
+        right: 8rem;
+    }
+
+    .left{
+        left: 7.5rem;
+    }
+
+    .right{
+        right: 7.5rem;
+    }
+
+}
+
+
+
+
+
+@media(max-width: 650px){
+    
+    .landing img{
+        width: 30%;
+    }
+
+    .landing h1{
+        font-size: 30px;
+    }
+
+    .countdown{
+        font-size: 20px;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .countdown div{
+        height: 60px;
+        width: 70%;
+    }
+
+    .container{
+        height: 180vh;
+    }
+
+}
