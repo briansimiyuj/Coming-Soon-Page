@@ -66,11 +66,13 @@ function as(){
 
 }
 
-lb.addEventListener('mouseover', fuck)
 
-function fuck(){
 
-    console.log('Goddamn')
+lb.addEventListener('mouseover', hello)
+
+function hello(){
+
+    console.log('perfect')
 
     ls.classList.toggle('show')
 
